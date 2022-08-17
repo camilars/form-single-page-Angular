@@ -1,0 +1,107 @@
+.card-form {
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  margin-top: 30px;
+
+  &-input {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .grow-2 {
+    flex-grow: 2;
+  }
+}
+
+.session-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: #767676;
+  height: 100%;
+
+  label {
+    font-weight: 400;
+    font-size: 0.875em;
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+
+  input {
+    border: 2px solid #aaaaaa;
+    border-radius: 4px;
+    height: 40px;
+    padding: 10px;
+    font-size: 0.875em;
+    color: #767676;
+  }
+}
+
+.checkbox {
+  .input-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #0dbdbd;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .input-checkbox:checked {
+    background-color: #0dbdbd;
+  }
+
+  label {
+    color: #111111;
+    width: 214px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    cursor: pointer;
+    vertical-align: super;
+    margin-left: 8px;
+  }
+}
+
+span {
+  font-size: 0.875rem;
+  color: #ff4b4b;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .card-form {
+    padding: 0;
+  }
+  .form-group {
+    flex-direction: column;
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .mt-70 {
+    margin-top: 0;
+  }
+
+  .gap-0 {
+    gap: 0;
+  }
+}

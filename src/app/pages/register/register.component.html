@@ -1,0 +1,52 @@
+<div class="card-form">
+  <h1>Intern Sign Up</h1>
+  <form [formGroup]="formRegister" class="form" novalidate (ngSubmit)="register()">
+    <div class="form-input">
+      <div class="session-input">
+        <label for="fullName">Full Name *</label>
+        <input type="text" placeholder="Name" formControlName="fullName">
+        <span *ngIf="!formRegister.get('fullName').valid && formRegister.get('fullName').touched">Full Name
+          Invalid</span>
+      </div>
+    </div>
+    <div class="form-group gap-0">
+      <div class="form-input grow-2">
+        <div class="session-input">
+          <label for="email">E-mail *</label>
+          <input type="email" placeholder="example@email.com" formControlName="email">
+          <span *ngIf="!formRegister.get('email').valid && formRegister.get('email').touched">E-mail Invalid</span>
+        </div>
+        <div class="session-input">
+          <label for="password">Password *</label>
+          <input type="password" placeholder="Enter your password" formControlName="password">
+          <span *ngIf="!formRegister.get('password').valid && formRegister.get('password').touched">Password
+            Invalid</span>
+        </div>
+      </div>
+      <div class="form-input flex-row">
+        <div class="session-input">
+          <label for="phone">Phone</label>
+          <input type="text" placeholder="(83) 00000-0000" formControlName="phone">
+          <span *ngIf="!formRegister.get('phone').valid && formRegister.get('phone').touched">Phone Invalid</span>
+        </div>
+        <div class="session-input">
+          <label for="birthday">Birthday *</label>
+          <input type="date" placeholder="dd/mm/yyyy" formControlName="birthday">
+          <span *ngIf="!formRegister.get('birthday').valid && formRegister.get('birthday').touched">Age
+            Invalid</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-group mt-70">
+      <div class="checkbox">
+        <div>
+          <input id="acceptTerms" type="checkbox" class="input-checkbox" formControlName="acceptTerms" />
+          <label class="checkbox-label" for="acceptTerms">I accept the terms and privacy</label>
+        </div>
+        <span *ngIf="submitted && f.acceptTerms.errors">You must accept
+          the terms</span>
+      </div>
+      <app-button [label]="'Register'"></app-button>
+    </div>
+  </form>
+</div>
